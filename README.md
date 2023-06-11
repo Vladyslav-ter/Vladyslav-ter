@@ -3,7 +3,7 @@
 
 - 🌱 I’m currently learning **React**
 
-- 👨‍💻 All of my projects are available at [https://github.com/Vlad228357/Courses](https://github.com/Vlad228357/Courses)
+- 👨‍💻 All of my projects are available at [https://github.com/Vladyslav-ter/Vladyslav-ter](https://github.com/Vladyslav-ter/Vladyslav-ter)
 
 - 📫 How to reach me **vladt499@gmail.com**
 
