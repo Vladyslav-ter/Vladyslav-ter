@@ -1,0 +1,165 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Assistant', sans-serif;
+}
+
+header {
+    background-image: url(./img/bcimg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    height: 52vw;
+}
+
+.block-navigation {
+    width: 100%;
+    padding: 1% 2%;
+    opacity: .8;
+    background-color: #000303;
+    margin: 0;
+}
+
+.block-networks {
+    padding: 0;
+}
+
+.block-logo img {
+    width: 4vw;
+    margin: 0 0 2% 0;
+}
+
+.block-logo h2 {
+    font-size: 1.8vw;
+    color: #FFFFFF;
+}
+
+.nav {
+    padding: 0;
+}
+
+.nav-link {
+    font-size: 1.5vw;
+    padding: 0 3% 0 0;
+    color: #FFFFFF;
+}
+
+.nav-link:nth-of-type(5) {
+    padding: 0;
+}
+
+.nav-link:hover {
+    color: #0DD42B;
+}
+
+.block-networks a:nth-child(1) img {
+    width: 1.2vw;
+}
+
+.block-networks a:nth-child(2) img {
+    width: 2.5vw;
+}
+
+.block-networks a:nth-child(3) img {
+    width: 2.5vw;
+}
+
+.filling-form {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.filling-form legend {
+    font-size: 1.5vw;
+    margin-top: 1.5vw;
+}
+
+.form-control {
+    background-color: inherit;
+    color: #FFFFFF;
+    font-size: 1.2vw;
+    padding: 1vw 0 0 0;
+}
+
+.form-control::placeholder {
+    color: #FFFFFF;
+    font-size: 1.2vw;
+}
+
+.btn {
+    padding: 1% 0;
+    width: 90%;
+    font-size: 1.2vw;
+    margin: 2vw 0 2vw 0;
+}
+
+.block-info .col-md-12 h1 {
+    font-size: 3.5vw;
+    color: #020202;
+    margin: 3.5vw 0 2.5vw 0;
+}
+
+.block-description p {
+    font-size: 1.2vw;
+    color: #020202;
+    margin: 0;
+}
+
+.img-graph img {
+    width: 25vw;
+}
+
+.block-description .btn {
+    background-color: inherit;
+    color: #099B1F;
+    font-size: 1.4vw;
+    width: auto;
+    margin: 1vw 0 0 8vw;
+}
+
+.block-description .btn:focus {
+    box-shadow: none;
+}
+
+.block-cards {
+    margin: 7% 0 0 0;
+    height: 32.5vw;
+    background-image: url(./img/bc-img-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    background-blend-mode: color;
+}
+
+.block-cards-name h1 {
+    font-size: 3vw;
+    margin: 1.5vw 0 4vw 0;
+}
+
+.card {
+    background-color:rgba(0, 0, 0, 0);
+}
+
+.card img {
+    width: 50%;
+}
+
+.card-text {
+    font-size: 1.6vw;
+}
+
+.emty-block {
+    margin: 35vw;
+}
+
+.block-footer-logo img {
+    width: 15vw;
+    margin-bottom: 2vw;
+}
+
+.block-founded {
+    font-size: 1.2vw;
+}
+
+footer {
+    padding: 2vw 0 1vw 0;
+}
