@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Піцерія Domino's Pizza</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+                <a href="index.html"><img id="logo" src="Pizza_pictures/Carlo.png" alt="Dominos Pizza"></a>
+            <nav>
+                <ul>
+                    <li>Конструктор піцци</li>
+                    <li>Картопляне меню</li>
+                    <li>Салати</li>
+                    <li>Напої</li>
+                    <li>Доставка</li>
+                    <li>Зворотній зв'язок</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Збери піццу своєї мрії</h1>
+        <sub>перетягни всi необхiднi iнгредiєнти</sub>
+        <div id="banner">Отримай знижку 30%!<br><button>Отримати</button></div>
+        <h3>Розмiр:</h3>
+        <form id='pizza' action="">
+            <label class="radio"><input type="radio" class="radioIn" id="small" name="size" value="small" title="50"><span class="fakeRadio"></span><span>Маленька</span></label>
+            <label class="radio"><input type="radio" class="radioIn" id="mid" name="size" value="mid" title="70"><span class="fakeRadio"></span><span>Середня</span></label>
+            <label class="radio"><input type="radio" class="radioIn" id="big" name="size" value="big" checked="true" title="100"><span class="fakeRadio"></span><span>Велика</span></label>
+        </form>
+        <div class="table-wrapper">
+            <div class="table">
+                <img id="table_constructor img" src="Pizza_pictures/klassicheskij-bortik_1556622914630.png" alt="Корж класичний">
+                <button id="reset_table">Сбросить</button>
+            </div>
+            <div class="ingridients" id="ingridients" data-zone="1">
+                <h3>Соуси:</h3>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="sauceClassic" data-item="sauceClassic" src="Pizza_pictures/sous-klassicheskij_1557758736353.png" alt="" title="20">
+                    <span>Кетчуп</span>
+                </div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="sauceBBQ" data-item="sauceBBQ" src="Pizza_pictures/sous-bbq_155679418013.png" alt="" title="30">
+                    <span>BBQ</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="sauceRikotta" data-item="sauceRikotta" src="Pizza_pictures/sous-rikotta_1556623391103.png" alt="" title="10">
+                    <span>Рiкотта</span></div>
+                <h3>Топінги:</h3>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="moc1" data-item="moc1" src="Pizza_pictures/mocarela_1556623220308.png" alt="" title="15">
+                    <span>Сир звичайний</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="moc2" data-item="moc2" src="Pizza_pictures/mocarela_1556785182818.png" alt="" title="20">
+                    <span>Сир фета</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="moc3" data-item="moc3" src="Pizza_pictures/mocarela_1556785198489.png" alt="" title="10">
+                    <span>Моцарелла</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="telya" data-item="telya" src="Pizza_pictures/telyatina_1556624025747.png" alt="" title="15">
+                    <span>Телятина</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="vetch1" data-item="vetch1" src="Pizza_pictures/vetchina.png" alt="" title="10">
+                    <span>Помiдори</span></div>
+                <div>
+                    <img draggable="true"  class="itemIngridients" id="vetch2" data-item="vetch2" src="Pizza_pictures/vetchina_1556623556129.png" alt="" title="15">
+                    <span>Гриби</span></div>
+            </div>
+        </div>
+        <div class="result">
+            <div id="price" class="price"><p>Цiна:</p></div>
+            <div class="sauces"><p>Соуси:</p></div>
+            <div class="topings"><p>Топiнги:</p></div>
+        </div>
+    </main>
+    <footer>
+        <h2>Пiдтверди замовлення</h2>
+        <sub>введи данi i пiдтверди замовлення</sub>
+        <form name="info" method="POST" action="./php/mail.php">
+            <div class="grid">
+                <label for="name">Ваше ім'я</label>
+                <input placeholder="Iм'я" name="name" type="text" required>
+                <label for="phone">Номер телефону</label>
+                <input placeholder="+380505050500" name="phone" type="tel" required>
+                <label for="email">Електронна пошта</label>
+                <input placeholder="email@email.com" name="email" type="email" required>
+                <input class='button' name="cancel" type="reset" value="Зкинути">
+                <input class='button' name="btnSubmit" type="button" value="Підтвердити замовлення >>">
+            </div>
+        </form>
+        <address>© 2002–2020 Мережа піцерій Domino!</address>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

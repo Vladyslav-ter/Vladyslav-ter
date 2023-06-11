@@ -1,0 +1,105 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(123, 123, 123);
+}
+
+form {
+    margin: 7% auto;
+    width: 28%;
+    height: auto;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    position: relative;
+    padding: 16% 10% 4% 10%;
+}
+
+label:nth-child(1) {
+    font-size: 2.5vw;
+    display: block;
+}
+
+.row {
+    margin: 20% 0 20% 0;
+    position: relative;
+}
+
+.row input {
+    width: 100%;
+    font-size: 1vw;
+    display: block;
+    border: none;
+    border-bottom: .2vw solid #a7a7a7;
+    box-sizing: border-box;
+    background: transparent;
+    padding: 1.5% 7% 1% 1%;
+}
+
+.row input:focus {
+    outline: none;
+    border-color: #1976D2;
+}
+
+.row label {
+    position: absolute;
+    left: 1%;
+    top: -2%;
+    padding: 0 1%;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2vw;
+    color: #a7a7a7;
+    transition: all .2s ease;
+    cursor: inherit;
+    overflow: hidden;
+}
+
+.row input:focus + label,
+.row input:valid + label {
+    font-size: .8vw;
+    transform: translateY(-.8vw);
+}
+
+.button {
+    margin: 0 0 20% 0;
+}
+
+.button input {
+    padding: 6% 25%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 1vw;
+    background: linear-gradient(to right, rgb(109, 162, 170), rgb(245, 162, 176));
+    border: none;
+    border-radius: 30px;
+}
+
+.row-registration {
+    font-size: .8vw;
+    color: #a7a7a7;
+}
+
+.row-registration + a {
+    font-size: .8vw;
+    text-decoration: none;
+    color: black;
+}
+
+.password-row::before {
+    content: "";
+    background-image: url(./img/icon.png);
+    position: absolute;
+    top: .3vw;
+    right: 0;
+    width: 1.5vw;
+    height: 1vw;
+    background-size: 1vw;
+    background-repeat: no-repeat;
+    display: inline-block;
+}

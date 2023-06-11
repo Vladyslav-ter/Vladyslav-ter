@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+            window.onload = function () {        
+                document.getElementById("btnGet").addEventListener("click", () => {
+                    const xhr = new XMLHttpRequest()
+                    
+                    xhr.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            const response = JSON.parse(this.responseText);
+                            const exchange = response.find(item => item.cc === 'USD').rate;
+                            const exchange1 = response.find(item => item.cc === 'AUD').rate;
+                            const exchange2 = response.find(item => item.cc === 'SGD').rate;
+                            const exchange3 = response.find(item => item.cc === 'GBP').rate;
+                            const exchange4 = response.find(item => item.cc === 'BGN').rate;
+                            const exchange5 = response.find(item => item.cc === 'PKR').rate;
+                            const exchange6 = response.find(item => item.cc === 'CHF').rate;
+                            const error = "Помилка, курс менше 25 грн"
+                            if (exchange > "25") {
+                                document.getElementById("USD").innerHTML = "Курс: " + exchange;
+                            } else {
+                                document.getElementById("USD").innerHTML = error;
+                            }
+                            if (exchange1 > "25") {
+                                document.getElementById("AUD").innerHTML = "Курс: " + exchange1;
+                            } else {
+                                document.getElementById("AUD").innerHTML = error;
+                            }
+                            if (exchange2 > "25") {
+                                document.getElementById("SGD").innerHTML = "Курс: " + exchange2;
+                            } else {
+                                document.getElementById("SGD").innerHTML = error;
+                            }
+                            if (exchange3 > "25") {
+                                document.getElementById("GBP").innerHTML = "Курс: " + exchange3;
+                            } else {
+                                document.getElementById("GBP").innerHTML = error;
+                            }
+                            if (exchange4 > "25") {
+                                document.getElementById("BGN").innerHTML = "Курс: " + exchange4;
+                            } else {
+                                document.getElementById("BGN").innerHTML = error;
+                            }
+                            if (exchange5 > "25") {
+                                document.getElementById("PKR").innerHTML = "Курс: " + exchange5;
+                            } else {
+                                document.getElementById("PKR").innerHTML = error;
+                            }
+                            if (exchange6 > "25") {
+                                document.getElementById("CHF").innerHTML = "Курс: " + exchange6;
+                            } else {
+                                document.getElementById("CHF").innerHTML = error;
+                            }
+                            
+                        }
+                    }
+                    const url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json"
+
+                    xhr.open("GET", url, true);
+                    xhr.send(); 
+                });
+            }
+    </script>
+</head>
+<body>
+    <table border="1" >
+        <tr>
+            <td>Долар США</td>
+            <td id="USD"></td>
+        </tr>
+        <tr>
+            <td>Австралійський долар</td>
+            <td id="AUD"></td>
+        </tr>
+        <tr>
+            <td>Сінгапурський долар</td>
+            <td id="SGD"></td>
+        </tr>
+        <tr>
+            <td>Фунт стерлінгів</td>
+            <td id="GBP"></td>
+        </tr>
+        <tr>
+            <td>Болгарський лев</td>
+            <td id="BGN"></td>
+        </tr>
+        <tr>
+            <td>Пакистанська рупія</td>
+            <td id="PKR"></td>
+        </tr>
+        <tr>
+            <td>Швейцарський франк</td>
+            <td id="CHF"></td>
+        </tr>
+    </table>
+    <input id="btnGet" type="button" value="Отримати курс">
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    width: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#btnGet {
+    width: 10%;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 15px;
+    color: #8d2121;
+    font-weight: 700;
+    background-color: aliceblue;
+    border: none;
+    box-shadow: 2px 3px #326d45;
+    margin-top: 10px;
+}
